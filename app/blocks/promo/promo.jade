@@ -1,0 +1,15 @@
+mixin promo()
+
+    +b('section').promo 
+        +e.logo
+            +e.around
+                img(src='/images/around.png')
+            +e.volvo
+                img(src='/images/volvo.png')
+        +e.content 
+            +e('P').chapter Какая вы <br> модель Volvo?
+            +e('p').text Марка Volvo отпраздновала полвека в&nbsp;России. По&nbsp;такому случаю самое время познакомиться поближе с&nbsp;легендарными моделями и&nbsp;наследием бренда. Какая из&nbsp;них больше всего олицетворяет вас и&nbsp;передает ваш характер? Пройдите тест и&nbsp;узнайте!
+            +e('button').button 
+                +e('p').button__text Пройдите тест и&nbsp;узнайте!
+        +e.sharing
+            +sharing()

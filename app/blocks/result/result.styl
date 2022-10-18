@@ -1,0 +1,120 @@
+.result
+    position relative
+    display flex
+    flex-flow column
+    justify-content center
+    align-items center
+    height 100vh
+    background url('/images/result-bg1.jpg') no-repeat center
+    background-size cover
+    padding w(20) w(200)
+    +below(768px)
+        padding wm(30) wm(20) wm(45) 
+        background-image url('/images/result-bg-mobile.jpg')
+        background-size cover
+
+    &__wrap
+        position relative
+        display flex
+        flex-direction column
+        padding w(15) w(50)
+        background $c-gradresult
+        border w(3) solid $c-white
+        border-radius w(20)
+        +below(768px)
+            border-radius wm(20)
+            padding-top wm(30)
+            padding-left wm(30)
+            padding-right wm(20)
+            height 100%
+            justify-content space-between
+
+    &__title
+        font-family $ff-volvobroad
+        font-weight 500
+        font-size w(65)
+        line-height w(90)
+        color $c-white
+        +below(768px)
+            font-size wm(23)
+
+    &__answer
+        font-family $ff-volvobroad
+        font-weight 500
+        font-size w(89)
+        line-height w(71)
+        color $c-white
+        +below(768px)
+            padding-top wm(5)
+            font-size wm(33)
+            line-height wm(30)
+
+    &__text
+        font-family $ff-volvo
+        font-weight 300
+        font-size w(40)
+        line-height w(55)
+        color $c-white
+        padding-top w(50)
+        +below(768px)
+            padding-top wm(30)
+            font-size wm(13)
+            line-height wm(18)
+
+    &__btn
+        position absolute
+        width w(534)
+        height w(94)
+        bottom w(-47)
+        left 50%
+        transform translateX(-50%)
+        font-size w(58)
+        background $c-black
+        color $c-white
+        border w(3) solid $c-white
+        box-sizing border-box
+        border-radius w(15)
+        +below(768px)
+            width wm(186)
+            height wm(37)
+            bottom wm(-18)
+            font-size wm(20)
+            background $c-black
+            border wm(2) solid $c-white
+            box-sizing border-box
+            border-radius wm(8)
+
+    &__sharing
+        margin-top w(30)
+        display flex
+        flex-flow row nowrap
+        justify-content flex-start
+        align-items center
+        .sharing__list
+            flex-flow row
+        .sharing__item
+            margin-top 0
+        +below(768px)
+            .sharing__item
+                width wm(20)
+                .sharing__icon_vk
+                    width wm(15)
+                .sharing__icon_fb
+                    width wm(15)
+                .sharing__icon_od
+                    width wm(15)
+                .sharing__icon_tw
+                    width wm(15)
+
+    &__link
+        display inline-block
+        margin-right w(10)
+        font-family $ff-volvo
+        color $c-white
+        font-weight bold
+        font-size w(25)
+        line-height w(55)
+        text-transform uppercase
+        +below(768px)
+            font-size wm(12)
+            line-height wm(55)

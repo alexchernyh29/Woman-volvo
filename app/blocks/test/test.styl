@@ -1,0 +1,185 @@
+.test
+    position relative
+    display flex
+    flex-flow column
+    justify-content center
+    align-items center
+    height 100vh
+    background-size cover
+    padding w(80) w(180) w(90)
+    +below(768px)
+        padding wm(30) wm(20) wm(45)
+
+    &__number
+        position absolute
+        font-family $ff-volvobroad
+        font-weight 500
+        font-size w(65)
+        line-height 1
+        color $c-white
+        left 55%
+        top 55%
+        transform translate(-50%, -50%)
+        z-index 2
+        +below(768px)
+            font-size wm(20)
+
+    &__wrap
+        position relative
+        display flex
+        flex-direction column
+        padding w(15) w(260)
+        background $c-gradtest
+        border w(3) solid $c-white
+        border-radius w(20)
+        +below(768px)
+            height 90vh
+            border-radius wm(20)
+            padding wm(40) wm(25) wm(55)
+
+    &__counter
+        position absolute
+        font-family $ff-volvobroad
+        font-weight 500
+        font-size w(178)
+        line-height w(142)
+        color $c-white
+        +below(768px)
+            font-size wm(66)
+            line-height wm(53)
+
+    &__title
+        font-family $ff-volvobroad
+        font-weight 500
+        font-size w(89)
+        line-height w(71)
+        color $c-white
+        padding-left w(160)
+        +below(768px)
+            font-size wm(30)
+            line-height wm(30)
+            padding-left wm(55)
+
+    &__list
+        padding-top w(50)
+        padding-left w(25)
+        +below(768px)
+            height 100%
+            display flex
+            flex-flow column
+            align-items stretch
+            justify-content space-between
+            width wm(200)
+            padding-top wm(25)
+            padding-left wm(10)
+
+    &__item
+        position relative
+        padding-left w(80)
+        padding-bottom w(50)
+        cursor pointer
+        
+        &.is-active .test__sign::after
+            opacity 1
+            visibility visible
+            z-index 1
+
+        &:last-child
+            margin-bottom 0
+        &:hover .test__sign::after
+            opacity 1
+            visibility visible
+            z-index 1
+    
+    &__check
+        position absolute
+        top 0
+        left 0
+        opacity 0
+        transition opacity .3s
+
+        img
+            width w(130)
+
+    &__sign
+        position absolute
+        top 30%
+        left 0
+        transform translateY(-50%)
+        width w(69)
+        height w(69)
+        &::before
+            position absolute
+            top 0
+            left 0
+            width 100%
+            height 100%
+            content ''
+            border 3px solid $c-white
+            border-radius w(10)
+            filter blur(w(3))
+        &::after
+            content ''
+            position absolute
+            top 50%
+            left 50%
+            width w(116)
+            height w(116)
+            transform translate(-50%, -50%)
+            background-color $c-lite
+            filter blur(w(40))
+            border-radius w(10)
+            opacity 0
+            visibility hidden
+            z-index -1
+            transition opacity .3s
+
+        +below(768px)
+            top 20%
+            width wm(30)
+            height wm(30)
+            &::before
+                border 2px solid $c-white
+                border-radius wm(5)
+            &::after
+                width wm(44)
+                height wm(44)
+                filter blur(wm(20))
+                border-radius wm(5)
+
+
+    &__answer-text
+        font-family $ff-volvo
+        font-weight 300
+        font-size w(48)
+        color $c-white 
+        padding-left w(30)
+        +below(768px)
+            font-size wm(18)
+            padding-bottom wm(10)
+            padding-left wm(30)
+
+    &__btn
+        position absolute
+        bottom w(-47)
+        left 50%
+        transform translateX(-50%)
+        text-transform lowercase
+        padding w(5) w(50) w(21)
+        min-width w(365)
+        background-color $c-black
+        color $c-white
+        font-family $ff-volvo
+        font-size w(58)
+        line-height 1
+        border-radius w(15)
+        border w(5) solid $c-white
+        +below(768px)
+            width wm(186)
+            height wm(37)
+            bottom wm(-18)
+            background $c-black
+            border wm(2) solid 
+            box-sizing border-box $c-white
+            border-radius wm(8)
+            font-size wm(20)

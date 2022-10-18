@@ -1,0 +1,28 @@
+mixin test()
+
+    +b('section').test()
+        +e.wrap
+            +e.counter <span>1</span>/7
+            +e('p').title
+            +e('ul').list
+                +e('li').item(data-id='А')
+                    +e.sign
+                        +e('p').number 1
+                    +e('p').answer-text
+                +e('li').item(data-id='Б')
+                    +e.sign
+                        +e('p').number 2
+                    +e('p').answer-text
+                +e('li').item(data-id='В')
+                    +e.sign
+                        +e('p').number 3
+                    +e('p').answer-text
+                +e('li').item(data-id='Г')
+                    +e.sign
+                        +e('p').number 4
+                    +e('p').answer-text
+                +e('li').item(data-id='Д')
+                    +e.sign
+                        +e('p').number 5
+                    +e('p').answer-text
+            +e('button').btn Далее
